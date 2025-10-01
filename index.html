@@ -13,21 +13,24 @@
       --sub:#7d8590;
       --grad-start:#452293;
       --grad-end:#0e81a6;
-      --logoGrad:linear-gradient(90deg,#8A2BE2,#0EBEFF); /* same as "Confidence" on tiptrack.pro */
+      --logoGrad:linear-gradient(90deg,#8A2BE2,#0EBEFF);
     }
     *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
     body{background:var(--bg);color:var(--text);line-height:1.6;}
     a{text-decoration:none;color:inherit;}
-    /* ---------- top nav ---------- */
+
+    /* --- nav --- */
     .navbar{position:fixed;top:0;left:0;right:0;background:var(--card);border-bottom:1px solid var(--border);z-index:1000;}
     .navInner{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;}
     .logo{font-size:1.25rem;font-weight:800;background:var(--logoGrad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    /* ---------- hero ---------- */
+
+    /* --- hero --- */
     .hero{text-align:center;padding:120px 20px 70px;}
     .badge{display:inline-block;background:var(--logoGrad);color:#fff;font-weight:700;padding:6px 14px;border-radius:999px;font-size:.75rem;margin-bottom:1.2rem;}
     .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;margin-bottom:.5em;}
     .hero p{font-size:1.25rem;color:var(--sub);}
-    /* ---------- features grid with gradient bg ---------- */
+
+    /* --- features --- */
     .features{position:relative;padding:60px 20px;overflow:hidden;}
     .features::before{content:"";position:absolute;inset:0;background:linear-gradient(45deg,var(--grad-start),var(--grad-end));opacity:.08;pointer-events:none;}
     .container{max-width:1100px;margin:auto;position:relative;z-index:1;}
@@ -36,10 +39,15 @@
     .card .emoji{font-size:2.2rem;margin-bottom:.6rem;}
     .card h3{font-size:1.15rem;margin-bottom:.6rem;background:var(--logoGrad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
     .card p{color:var(--sub);font-size:.95rem;}
-    /* ---------- future section ---------- */
+
+    /* --- future --- */
     .future{background:linear-gradient(90deg,#34d399,#10b981);color:#000;border-radius:12px;padding:50px 30px;text-align:center;margin-top:60px;}
     .future h2{font-size:1.7rem;margin-bottom:.6rem;}
     .future p{font-size:1rem;opacity:.9;}
+
+    /* --- CTA button (purple→blue gradient) --- */
+    .btn{background:var(--logoGrad);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;border:none;cursor:pointer;font-size:1rem;transition:opacity .25s;text-decoration:none;display:inline-block;}
+    .btn:hover{opacity:.85;}
   </style>
 </head>
 <body>
@@ -61,46 +69,23 @@
   <section class="features">
     <div class="container">
       <div class="grid">
-        <div class="card">
-          <div class="emoji">📅</div>
-          <h3>One Calendar Per Service</h3>
-          <p>No more juggling device calendars. Create a calendar for each service and let the scheduler link rooms & equipment automatically.</p>
-        </div>
-        <div class="card">
-          <div class="emoji">🚫</div>
-          <h3>No Double-Booking</h3>
-          <p>“Hold, then confirm” logic plus Quick-Block for cleaning windows keeps every resource conflict-free.</p>
-        </div>
-        <div class="card">
-          <div class="emoji">📊</div>
-          <h3>Utilization Insights</h3>
-          <p>Spot peak times, busy rooms and bottlenecks at a glance so you can staff and price smarter.</p>
-        </div>
-        <div class="card">
-          <div class="emoji">🤖</div>
-          <h3>Voice + Chat Booking</h3>
-          <p>Flip on Conversation AI or Voice AI and customers can book 24/7 using the same rules you already set.</p>
-        </div>
-        <div class="card">
-          <div class="emoji">🔒</div>
-          <h3>Membership Guard</h3>
-          <p>Require an active subscription for premium services—booking pauses automatically if payment lapses.</p>
-        </div>
-        <div class="card">
-          <div class="emoji">⚡</div>
-          <h3>Native in GHL</h3>
-          <p>Everything lives inside GoHighLevel—no extra logins, tokens, or zaps needed.</p>
-        </div>
+        <div class="card"><div class="emoji">🗓️</div><h3>One Calendar Per Service</h3><p>No more juggling device calendars. Create a calendar for each service and let the scheduler link rooms & equipment automatically.</p></div>
+        <div class="card"><div class="emoji">🚫</div><h3>No Double-Booking</h3><p>“Hold, then confirm” logic plus Quick-Block for cleaning windows keeps every resource conflict-free.</p></div>
+        <div class="card"><div class="emoji">📈</div><h3>Utilization Insights</h3><p>Spot peak times, busy rooms and bottlenecks at a glance so you can staff and price smarter.</p></div>
+        <div class="card"><div class="emoji">✨</div><h3>Voice + Chat Booking</h3><p>Flip on Conversation AI or Voice AI and customers can book 24/7 using the same rules you already set.</p></div>
+        <div class="card"><div class="emoji">🛡️</div><h3>Membership Guard</h3><p>Require an active subscription for premium services—booking pauses automatically if payment lapses.</p></div>
+        <div class="card"><div class="emoji">💡</div><h3>Native in GHL</h3><p>Everything lives inside GoHighLevel—no extra logins, tokens, or zaps needed.</p></div>
       </div>
     </div>
   </section>
-<!-- ---- future pacing ---- -->
-<section class="container">
-  <div class="future">
-    <h2>Innovation Never Stops</h2>
-    <p>We're already building the next suite of apps that push the limits of what's possible inside GHL. Stay tuned—more game-changers dropping soon.</p>
-    <a href="REPLACE_WITH_YOUR_FORM_URL" class="btn">Join The Waitlist</a>
-  </div>
-</section>
+
+  <!-- ---- future pacing ---- -->
+  <section class="container">
+    <div class="future">
+      <h2>Innovation Never Stops</h2>
+      <p>We're already building the next suite of apps that push the limits of what's possible inside GHL. Stay tuned—more game-changers dropping soon.</p>
+      <a href="REPLACE_WITH_YOUR_FORM_URL" class="btn">Join The Waitlist</a>
+    </div>
+  </section>
 </body>
 </html>
